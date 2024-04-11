@@ -49,6 +49,12 @@
       "Path": "Process/Process Transaction.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "dtSpolSite&Sequence_83",
+        "strWorkID&Sequence_83",
+        "booSignInExists&Sequence_75",
+        "credNetworkCredentials&Sequence_75",
+        "boolLoginPrompt&Sequence_75",
+        "boolHomePage&Sequence_76",
         "booNoWorkFile&Flowchart_1",
         "strWorkID&Flowchart_1",
         "booTestOpen&Flowchart_1",
@@ -155,10 +161,9 @@
       "Path": "Sequence.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "dtTest&Sequence_4",
-        "currentDate&Sequence_4",
-        "formattedDate&Sequence_4",
-        "test&Sequence_4"
+        "strWorkID&Sequence_10",
+        "strHoldingNumber&Sequence_1",
+        "dtest&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": null,
