@@ -117,6 +117,9 @@
       <Variable x:TypeArguments="x:String" Name="strDateTestedSPOL" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtHoldingNumber" />
       <Variable x:TypeArguments="x:String" Name="strHoldingNumber" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtEarTags" />
+      <Variable x:TypeArguments="x:String" Name="strEarTags" />
+      <Variable x:TypeArguments="s:String[]" Name="arrLines" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -760,13 +763,13 @@
                           <av:PointCollection x:Key="ConnectorLocation">290.25,576 290.25,618.5</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="Get Eartag Numbers from Spol" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                      <Sequence DisplayName="Get Eartag Numbers from Spol" sap:VirtualizedContainerService.HintSize="688,2466" sap2010:WorkflowViewState.IdRef="Sequence_10">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser - SPOL Site" sap:VirtualizedContainerService.HintSize="626,561" sap2010:WorkflowViewState.IdRef="BrowserScope_4" InformativeScreenshot="39c1a9d51a6398a81b789494a98bd08c" Selector="&lt;html app='msedge.exe' htmlwindowname='{}' title='Customer Service Centre and International Trade - Overdue CTS Discrepancies - Ready for LA' /&gt;">
+                        <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser - SPOL Site" sap:VirtualizedContainerService.HintSize="626,53" sap2010:WorkflowViewState.IdRef="BrowserScope_4" InformativeScreenshot="39c1a9d51a6398a81b789494a98bd08c" Selector="&lt;html app='msedge.exe' htmlwindowname='{}' title='Customer Service Centre and International Trade - Overdue CTS Discrepancies - Ready for LA' /&gt;">
                           <ui:BrowserScope.Body>
                             <ActivityAction x:TypeArguments="x:Object">
                               <ActivityAction.Argument>
@@ -817,25 +820,25 @@
                           </ui:BrowserScope.Body>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:BrowserScope>
-                        <usa:SharepointApplicationScope AzureApplicationID="{x:Null}" ClientContext="{x:Null}" ClientId="{x:Null}" ClientSecret="{x:Null}" LoginTimeout="{x:Null}" Password="{x:Null}" SecurePassword="{x:Null}" UserName="{x:Null}" AzureAppPermissions="None" DisplayName="Sharepoint application scope" sap:VirtualizedContainerService.HintSize="626,1017" sap2010:WorkflowViewState.IdRef="SharepointApplicationScope_1" PlatformType="Online" QueryGrouping="False" ResetCredentials="False" SharePointInstanceType="WebLogin" URL="https://defra.sharepoint.com/teams/Team1035">
+                        <usa:SharepointApplicationScope AzureApplicationID="{x:Null}" ClientContext="{x:Null}" ClientId="{x:Null}" ClientSecret="{x:Null}" LoginTimeout="{x:Null}" Password="{x:Null}" SecurePassword="{x:Null}" UserName="{x:Null}" AzureAppPermissions="None" DisplayName="Sharepoint application scope" sap:VirtualizedContainerService.HintSize="626,2262" sap2010:WorkflowViewState.IdRef="SharepointApplicationScope_1" PlatformType="Online" QueryGrouping="False" ResetCredentials="False" SharePointInstanceType="WebLogin" URL="https://defra.sharepoint.com/teams/Team1035">
                           <usa:SharepointApplicationScope.Body>
                             <ActivityAction x:TypeArguments="us:SharePointContextInfo">
                               <ActivityAction.Argument>
                                 <DelegateInArgument x:TypeArguments="us:SharePointContextInfo" Name="SharePointContextInfoTag" />
                               </ActivityAction.Argument>
-                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,873" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,2118" sap2010:WorkflowViewState.IdRef="Sequence_36">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <usal:ReadListItems AttachmentsAction="{x:Null}" ItemsDictArray="{x:Null}" LocalPathHintText="{x:Null}" RelativeUrlHintText="{x:Null}" CAMLQuery="[&quot;&lt;Query&gt;&lt;Where&gt;&lt;And&gt;&lt;Eq&gt;&lt;FieldRef Name='field_1' /&gt;&lt;Value Type='Text'&gt;&quot; + strWorkId + &quot;&lt;/Value&gt;&lt;/Eq&gt;&lt;IsNotNull&gt;&lt;FieldRef Name='field_13' /&gt;&lt;/IsNotNull&gt;&lt;/And&gt;&lt;/Where&gt;&lt;/Query&gt;&quot;]" ChooseFile="False" DisplayName="Get List of Eartags from SPOL" sap:VirtualizedContainerService.HintSize="530,142" sap2010:WorkflowViewState.IdRef="ReadListItems_1" ItemsTable="[dtEarTagsSplit]" ListName="Overdue CTS Discrepancies" ShowAttachFiles="False" ShowCAMLQuery="True" ShowCAMLWarning="False" ShowGroupDescription="False" ShowGroupName="False" ShowLibraryName="False" ShowListName="True" ShowLocalPath="False" ShowMove="False" ShowPermissionDropdown="False" ShowPropertiesDictionary="False" ShowRelativeUrl="False" ShowRename="False" ShowUserName="False" />
-                                <ui:FilterDataTable DataTable="[dtEarTagsSplit]" DisplayName="Filter to return Eartags - Outsanding and last tested date only" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="530,163" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" OutputDataTable="[dtEarTagsSplit]" SelectColumnsMode="Keep">
+                                <usal:ReadListItems AttachmentsAction="{x:Null}" ItemsDictArray="{x:Null}" LocalPathHintText="{x:Null}" RelativeUrlHintText="{x:Null}" CAMLQuery="[&quot;&lt;Query&gt;&lt;Where&gt;&lt;And&gt;&lt;Eq&gt;&lt;FieldRef Name='field_1' /&gt;&lt;Value Type='Text'&gt;&quot; + strWorkId + &quot;&lt;/Value&gt;&lt;/Eq&gt;&lt;IsNotNull&gt;&lt;FieldRef Name='field_13' /&gt;&lt;/IsNotNull&gt;&lt;/And&gt;&lt;/Where&gt;&lt;/Query&gt;&quot;]" ChooseFile="False" DisplayName="Get List of Eartags from SPOL" sap:VirtualizedContainerService.HintSize="530,142" sap2010:WorkflowViewState.IdRef="ReadListItems_1" ItemsTable="[dtEarTags]" ListName="Overdue CTS Discrepancies" ShowAttachFiles="False" ShowCAMLQuery="True" ShowCAMLWarning="False" ShowGroupDescription="False" ShowGroupName="False" ShowLibraryName="False" ShowListName="True" ShowLocalPath="False" ShowMove="False" ShowPermissionDropdown="False" ShowPropertiesDictionary="False" ShowRelativeUrl="False" ShowRename="False" ShowUserName="False" />
+                                <ui:FilterDataTable DataTable="[dtEarTags]" DisplayName="Filter to return Eartags - Outsanding and last tested date only" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="530,163" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" OutputDataTable="[dtEarTags]" SelectColumnsMode="Keep">
                                   <ui:FilterDataTable.Filters>
                                     <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                                       <ui:FilterOperationArgument Column="{x:Null}" Operand="{x:Null}" BooleanOperator="And" Operator="EQ" />
@@ -848,7 +851,7 @@
                                     </scg:List>
                                   </ui:FilterDataTable.SelectColumns>
                                 </ui:FilterDataTable>
-                                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtEarTagsSplit]" DisplayName="Get the date Tested from SPOL" sap:VirtualizedContainerService.HintSize="530,377" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+                                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtEarTags]" DisplayName="Get the date Tested from SPOL" sap:VirtualizedContainerService.HintSize="530,377" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
                                   <ui:ForEachRow.Body>
                                     <ActivityAction x:TypeArguments="sd:DataRow">
                                       <ActivityAction.Argument>
@@ -872,7 +875,75 @@
                                       </Sequence>
                                     </ActivityAction>
                                   </ui:ForEachRow.Body>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
                                 </ui:ForEachRow>
+                                <ui:FilterDataTable DataTable="[dtEarTags]" DisplayName="Remove field_3 from dtEarTags" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="530,163" sap2010:WorkflowViewState.IdRef="FilterDataTable_7" OutputDataTable="[dtEarTags]" SelectColumnsMode="Remove">
+                                  <ui:FilterDataTable.Filters>
+                                    <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                                      <ui:FilterOperationArgument Column="{x:Null}" Operand="{x:Null}" BooleanOperator="And" Operator="LT" />
+                                    </scg:List>
+                                  </ui:FilterDataTable.Filters>
+                                  <ui:FilterDataTable.SelectColumns>
+                                    <scg:List x:TypeArguments="InArgument" Capacity="4">
+                                      <InArgument x:TypeArguments="x:String">["field_3"]</InArgument>
+                                    </scg:List>
+                                  </ui:FilterDataTable.SelectColumns>
+                                </ui:FilterDataTable>
+                                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtEarTags]" DisplayName="For each remaining row in DTEarTags" sap:VirtualizedContainerService.HintSize="530,312" sap2010:WorkflowViewState.IdRef="ForEachRow_8">
+                                  <ui:ForEachRow.Body>
+                                    <ActivityAction x:TypeArguments="sd:DataRow">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,194" sap2010:WorkflowViewState.IdRef="Sequence_91">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <Assign DisplayName="Assign Row to String" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_42">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:String">[strEarTags]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:String">[CurrentRow("field_13").ToString.trim]</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </ui:ForEachRow.Body>
+                                </ui:ForEachRow>
+                                <Assign DisplayName="Assign strEarTags to an array (arrLines)" sap:VirtualizedContainerService.HintSize="530,83" sap2010:WorkflowViewState.IdRef="Assign_44">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="s:String[]">[arrLines]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="s:String[]">[strEarTags.Split(Environment.NewLine.ToCharArray, StringSplitOptions.RemoveEmptyEntries)]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <ui:BuildDataTable DataTable="[dtEarTagsSplit]" DisplayName="Create dtEarTagsSplit" sap:VirtualizedContainerService.HintSize="530,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_4" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;field_13&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+                                <ui:ForEach x:TypeArguments="x:Char" CurrentIndex="{x:Null}" DisplayName="For Each line in arrLines" sap:VirtualizedContainerService.HintSize="530,427" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[arrLines]">
+                                  <ui:ForEach.Body>
+                                    <ActivityAction x:TypeArguments="x:Char">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="x:Char" Name="line" />
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,300" sap2010:WorkflowViewState.IdRef="Sequence_92">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{line}]" DataTable="[dtEarTagsSplit]" DisplayName="Add Data Row to dtEarTagsSplit" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="AddDataRow_5" />
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </ui:ForEach.Body>
+                                </ui:ForEach>
                               </Sequence>
                             </ActivityAction>
                           </usa:SharepointApplicationScope.Body>
@@ -1795,7 +1866,7 @@
                                           <av:PointCollection x:Key="ConnectorLocation">290.25,1023.5 290.25,1058.5</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <Sequence DisplayName="Update SPOL" sap:VirtualizedContainerService.HintSize="556,3031" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                                      <Sequence DisplayName="Update SPOL" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_58">
                                         <Sequence.Variables>
                                           <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="newDictionary" />
                                           <Variable x:TypeArguments="s:DateTime" Name="currentDate" />

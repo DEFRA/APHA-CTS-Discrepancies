@@ -161,7 +161,9 @@
       "Path": "Sequence.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "strWorkID&Sequence_10",
+        "dtEartagsOutstanding&Sequence_1",
+        "newDictionary&Sequence_1",
+        "dtEarTagsSplit&Sequence_1",
         "strHoldingNumber&Sequence_1",
         "dtest&Sequence_1"
       ],
