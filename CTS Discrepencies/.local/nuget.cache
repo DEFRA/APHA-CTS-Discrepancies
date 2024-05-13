@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "YE7j1LHFUAD1u35c+yK00t2ZFVRLvBug9HsawaaCHA5OS1zMGCKZVFZCPMmDG5hfm/DeKHcqtY78ZD+mO3/2TA==",
+  "dgSpecHash": "myOrGkI1lqHm4x3UnXJ4VaRGM9RDNxWofjM4AKF7eaeCoh1pkZqk+BIBrzdgVpAOdw1w4Nv1fSY6bJRnxTLt1w==",
   "success": true,
   "projectFilePath": "C:\\Users\\m1011226\\Documents\\GitHub\\APHA-CTS-Discrepancies\\CTS Discrepencies\\.local\\",
   "expectedPackageFiles": [
@@ -24,6 +24,7 @@
     "C:\\Users\\m1011226\\.nuget\\packages\\htmlagilitypack\\1.11.38\\htmlagilitypack.1.11.38.nupkg.sha512",
     "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.10\\logging.1.0.10.nupkg.sha512",
     "C:\\Users\\m1011226\\.nuget\\packages\\mailkit\\3.1.1\\mailkit.3.1.1.nupkg.sha512",
+    "C:\\Users\\m1011226\\.nuget\\packages\\microsoft.activities\\1.0.1\\microsoft.activities.1.0.1.nupkg.sha512",
     "C:\\Users\\m1011226\\.nuget\\packages\\microsoft.activities.extensions\\2.0.6.9\\microsoft.activities.extensions.2.0.6.9.nupkg.sha512",
     "C:\\Users\\m1011226\\.nuget\\packages\\microsoft.aspnet.signalr.client\\2.4.0\\microsoft.aspnet.signalr.client.2.4.0.nupkg.sha512",
     "C:\\Users\\m1011226\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.3\\microsoft.aspnet.webapi.client.5.2.3.nupkg.sha512",
