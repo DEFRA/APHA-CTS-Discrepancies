@@ -47,6 +47,7 @@
       "Path": "Process/Process Transaction.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "strOffHoldingDate&Flowchart_1",
         "strEartagsOutstanding&Sequence_58",
         "strEarTagResolved&Sequence_58",
         "arrOutstandingLines&Sequence_127",
@@ -177,30 +178,40 @@
       "Path": "Sequence.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "newDictionary&Sequence_62",
-        "currentDate&Sequence_62",
-        "formattedDate&Sequence_62",
-        "strEarTagResolved&Sequence_62",
-        "strEartagsOutstanding&Sequence_62",
-        "strEarTagResolved&Sequence_58",
-        "formattedDate&Sequence_58",
-        "currentDate&Sequence_58",
-        "dtest&Sequence_58",
-        "strHoldingNumber&Sequence_58",
-        "newDictionary&Sequence_58",
-        "dtEartagsOutstanding&Sequence_58",
-        "dtEarTagsSplit&Sequence_58",
-        "strHolding&Sequence_58",
-        "dtEartagResolved&Sequence_58",
-        "strWorkId&Sequence_58",
-        "DateTestedSPOL&Sequence_58",
-        "strDateTestedSPOL&Sequence_58",
-        "dtCTSHoldingData&Sequence_58",
-        "strHoldingStatus&Sequence_58",
-        "booHoldingOn&Sequence_58",
-        "TransactionData&Sequence_58"
+        "strOffHoldingDate&Sequence_68",
+        "dtCTSHoldingData&Sequence_68",
+        "strHoldingStatus&Sequence_68",
+        "booHoldingOn&Sequence_68"
       ],
       "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/RetryCurrentTransaction.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "io_RetryNumber",
+        "io_TransactionNumber",
+        "in_SystemException",
+        "in_QueueRetry"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/TakeScreenshot.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Screenshot&Sequence_1",
+        "ScreenshotFileInfo&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Folder",
+        "io_FilePath"
+      ],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
     }

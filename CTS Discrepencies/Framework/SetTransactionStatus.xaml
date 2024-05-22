@@ -25,7 +25,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>876,1291</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1184,1291</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SetTransactionStatus___Sequence_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -157,7 +157,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence sap2010:Annotation.AnnotationText="Includes custom log fields to the log message.&#xA;They are removed after logging to prevent duplicated status messages about a single transaction." DisplayName="Log Success with additional logging fields" sap:VirtualizedContainerService.HintSize="584,2341" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence sap2010:Annotation.AnnotationText="Includes custom log fields to the log message.&#xA;They are removed after logging to prevent duplicated status messages about a single transaction." DisplayName="Log Success with additional logging fields" sap:VirtualizedContainerService.HintSize="584,2265" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -249,21 +249,21 @@
                   </Catch>
                 </TryCatch.Catches>
               </TryCatch>
-              <Sequence DisplayName="Populate Work Log" sap:VirtualizedContainerService.HintSize="522,990" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <Sequence DisplayName="Populate Work Log" sap:VirtualizedContainerService.HintSize="522,914" sap2010:WorkflowViewState.IdRef="Sequence_2">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <InvokeMethod DisplayName="Stop Stopwatch" sap:VirtualizedContainerService.HintSize="434,137" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="Stop">
+                <InvokeMethod DisplayName="Stop Stopwatch" sap:VirtualizedContainerService.HintSize="438,137" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="Stop">
                   <InvokeMethod.TargetObject>
                     <InArgument x:TypeArguments="sd:Stopwatch">[in_swProcessingTimer]</InArgument>
                   </InvokeMethod.TargetObject>
                 </InvokeMethod>
-                <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,331" sap2010:WorkflowViewState.IdRef="TryCatch_7">
+                <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,293" sap2010:WorkflowViewState.IdRef="TryCatch_7">
                   <TryCatch.Try>
-                    <l:Log_Case DisplayName="Log Case - Local File" sap:VirtualizedContainerService.HintSize="200,25" IN_dateCaseEndTime="[Now]" IN_dateCaseStartTime="[in_dateCaseStartTime]" IN_dateCaseTotalTime="[(Now - in_dateCaseStartTime).ToString]" IN_strCaseID="[String.Join(&quot;, &quot;, in_arrCaseID.Where(Function(s) not String.IsNullOrEmpty(s)))]" IN_strFilePath="[in_strWorkLogFilepath]" IN_strOutcome="Success" IN_strUser="[io_Config(&quot;Username&quot;).ToString]" IN_strWorkpackageName="[io_Config(&quot;logF_BusinessProcessName&quot;).ToString]" sap2010:WorkflowViewState.IdRef="Log_Case_1" in_dblCaseProcessingTime="[Math.Round(in_swProcessingTimer.Elapsed.TotalSeconds, 2)]">
+                    <l:Log_Case DisplayName="Log Case - Local File" sap:VirtualizedContainerService.HintSize="200,25" IN_dateCaseEndTime="[Now]" IN_dateCaseStartTime="[in_dateCaseStartTime]" IN_dateCaseTotalTime="[(Now - in_dateCaseStartTime).ToString]" IN_strCaseID="[String.Join(&quot;, &quot;, in_arrCaseID.Where(Function(s) not String.IsNullOrEmpty(s)))]" IN_strFilePath="[in_strWorkLogFilepath]" IN_strOutcome="Success" IN_strUser="[Environment.UserName]" IN_strWorkpackageName="[io_Config(&quot;logF_BusinessProcessName&quot;).ToString]" sap2010:WorkflowViewState.IdRef="Log_Case_1" in_dblCaseProcessingTime="[Math.Round(in_swProcessingTimer.Elapsed.TotalSeconds, 2)]">
                       <l:Log_Case.IN_strNotes>
                         <InArgument x:TypeArguments="x:String">
                           <Literal x:TypeArguments="x:String" Value="" />
@@ -277,10 +277,10 @@
                     </l:Log_Case>
                   </TryCatch.Try>
                   <TryCatch.Catches>
-                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,164" sap2010:WorkflowViewState.IdRef="Catch`1_7">
+                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_7">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
@@ -293,9 +293,9 @@
                     </Catch>
                   </TryCatch.Catches>
                 </TryCatch>
-                <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,331" sap2010:WorkflowViewState.IdRef="TryCatch_8">
+                <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,293" sap2010:WorkflowViewState.IdRef="TryCatch_8">
                   <TryCatch.Try>
-                    <l:LogTransaction DisplayName="LogTransaction - SQL" sap:VirtualizedContainerService.HintSize="200,25" IN_dateEndDateTime="[Now]" IN_dateStartDateTime="[in_dateCaseStartTime]" IN_intExitPoint="-1" IN_strFileName="[in_strSQLFilePath]" IN_strOutcome="Success" IN_strTotalTime="[(Math.Round(in_swProcessingTimer.Elapsed.TotalSeconds, 2)).ToString]" IN_strTransactionID="[String.Join(&quot;, &quot;, in_arrCaseID.Where(Function(s) not String.IsNullOrEmpty(s)))]" IN_strUser="[io_Config(&quot;Username&quot;).ToString]" IN_strVersion="[io_Config(&quot;WorkPackageVersion&quot;).ToString]" IN_strWorkPackage="[io_Config(&quot;WorkPackageID&quot;).ToString]" sap2010:WorkflowViewState.IdRef="LogTransaction_1">
+                    <l:LogTransaction DisplayName="LogTransaction - SQL" sap:VirtualizedContainerService.HintSize="200,25" IN_dateEndDateTime="[Now]" IN_dateStartDateTime="[in_dateCaseStartTime]" IN_intExitPoint="-1" IN_strFileName="[in_strSQLFilePath]" IN_strOutcome="Success" IN_strTotalTime="[(Math.Round(in_swProcessingTimer.Elapsed.TotalSeconds, 2)).ToString]" IN_strTransactionID="[String.Join(&quot;, &quot;, in_arrCaseID.Where(Function(s) not String.IsNullOrEmpty(s)))]" IN_strUser="[Environment.UserName]" IN_strVersion="[io_Config(&quot;WorkPackageVersion&quot;).ToString]" IN_strWorkPackage="[io_Config(&quot;WorkPackageID&quot;).ToString]" sap2010:WorkflowViewState.IdRef="LogTransaction_1">
                       <l:LogTransaction.IN_strMiscNotes>
                         <InArgument x:TypeArguments="x:String">
                           <Literal x:TypeArguments="x:String" DisplayName="Literal&lt;String&gt;" Value="" />
@@ -309,10 +309,10 @@
                     </l:LogTransaction>
                   </TryCatch.Try>
                   <TryCatch.Catches>
-                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,164" sap2010:WorkflowViewState.IdRef="Catch`1_8">
+                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_8">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
@@ -409,7 +409,7 @@
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence sap2010:Annotation.AnnotationText="Includes custom log fields to the log message.&#xA;They are removed after logging to prevent duplicated status messages about a single transaction." DisplayName="Log business exception with additional logging fields" sap:VirtualizedContainerService.HintSize="584,2406" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <Sequence sap2010:Annotation.AnnotationText="Includes custom log fields to the log message.&#xA;They are removed after logging to prevent duplicated status messages about a single transaction." DisplayName="Log business exception with additional logging fields" sap:VirtualizedContainerService.HintSize="584,2330" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -501,20 +501,20 @@
                       </Catch>
                     </TryCatch.Catches>
                   </TryCatch>
-                  <Sequence DisplayName="Populate Work Log" sap:VirtualizedContainerService.HintSize="522,990" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <Sequence DisplayName="Populate Work Log" sap:VirtualizedContainerService.HintSize="522,914" sap2010:WorkflowViewState.IdRef="Sequence_6">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <InvokeMethod DisplayName="Stop Stopwatch" sap:VirtualizedContainerService.HintSize="434,137" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" MethodName="Stop">
+                    <InvokeMethod DisplayName="Stop Stopwatch" sap:VirtualizedContainerService.HintSize="438,137" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" MethodName="Stop">
                       <InvokeMethod.TargetObject>
                         <InArgument x:TypeArguments="sd:Stopwatch">[in_swProcessingTimer]</InArgument>
                       </InvokeMethod.TargetObject>
                     </InvokeMethod>
-                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,331" sap2010:WorkflowViewState.IdRef="TryCatch_9">
+                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,293" sap2010:WorkflowViewState.IdRef="TryCatch_9">
                       <TryCatch.Try>
-                        <l:Log_Case DisplayName="Log Case - Local File" sap:VirtualizedContainerService.HintSize="200,25" IN_dateCaseEndTime="[Now]" IN_dateCaseStartTime="[in_dateCaseStartTime]" IN_dateCaseTotalTime="[(Now - in_dateCaseStartTime).ToString]" IN_strCaseID="[String.Join(&quot;, &quot;, in_arrCaseID.Where(Function(s) not String.IsNullOrEmpty(s)))]" IN_strFilePath="[in_strWorkLogFilepath]" IN_strOutcome="Business Exception" IN_strOutcomeMessage="[in_BusinessException.Message]" IN_strUser="[System.Environment.UserName]" IN_strWorkpackageName="[io_Config(&quot;logF_BusinessProcessName&quot;).ToString]" sap2010:WorkflowViewState.IdRef="Log_Case_2" in_dblCaseProcessingTime="[Math.Round(in_swProcessingTimer.Elapsed.TotalSeconds, 2)]">
+                        <l:Log_Case DisplayName="Log Case - Local File" sap:VirtualizedContainerService.HintSize="200,25" IN_dateCaseEndTime="[Now]" IN_dateCaseStartTime="[in_dateCaseStartTime]" IN_dateCaseTotalTime="[(Now - in_dateCaseStartTime).ToString]" IN_strCaseID="[String.Join(&quot;, &quot;, in_arrCaseID.Where(Function(s) not String.IsNullOrEmpty(s)))]" IN_strFilePath="[in_strWorkLogFilepath]" IN_strOutcome="Business Exception" IN_strOutcomeMessage="[in_BusinessException.Message]" IN_strUser="[Environment.UserName]" IN_strWorkpackageName="[io_Config(&quot;logF_BusinessProcessName&quot;).ToString]" sap2010:WorkflowViewState.IdRef="Log_Case_2" in_dblCaseProcessingTime="[Math.Round(in_swProcessingTimer.Elapsed.TotalSeconds, 2)]">
                           <l:Log_Case.IN_strNotes>
                             <InArgument x:TypeArguments="x:String">
                               <Literal x:TypeArguments="x:String" Value="" />
@@ -523,10 +523,10 @@
                         </l:Log_Case>
                       </TryCatch.Try>
                       <TryCatch.Catches>
-                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,164" sap2010:WorkflowViewState.IdRef="Catch`1_9">
+                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_9">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
@@ -539,9 +539,9 @@
                         </Catch>
                       </TryCatch.Catches>
                     </TryCatch>
-                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,331" sap2010:WorkflowViewState.IdRef="TryCatch_10">
+                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,293" sap2010:WorkflowViewState.IdRef="TryCatch_10">
                       <TryCatch.Try>
-                        <l:LogTransaction DisplayName="LogTransaction - SQL" sap:VirtualizedContainerService.HintSize="200,25" IN_dateEndDateTime="[Now]" IN_dateStartDateTime="[in_dateCaseStartTime]" IN_intExitPoint="[in_arrExitPoint(0)]" IN_strFileName="[in_strSQLFilePath]" IN_strOutcome="Business Exception" IN_strOutcomeNotes="[in_BusinessException.Message]" IN_strTotalTime="[(Math.Round(in_swProcessingTimer.Elapsed.TotalSeconds, 2)).ToString]" IN_strTransactionID="[String.Join(&quot;, &quot;, in_arrCaseID.Where(Function(s) not String.IsNullOrEmpty(s)))]" IN_strUser="[System.Environment.UserName]" IN_strVersion="[io_Config(&quot;WorkPackageVersion&quot;).ToString]" IN_strWorkPackage="[io_Config(&quot;WorkPackageID&quot;).ToString]" sap2010:WorkflowViewState.IdRef="LogTransaction_2">
+                        <l:LogTransaction DisplayName="LogTransaction - SQL" sap:VirtualizedContainerService.HintSize="200,25" IN_dateEndDateTime="[Now]" IN_dateStartDateTime="[in_dateCaseStartTime]" IN_intExitPoint="[in_arrExitPoint(0)]" IN_strFileName="[in_strSQLFilePath]" IN_strOutcome="Business Exception" IN_strOutcomeNotes="[in_BusinessException.Message]" IN_strTotalTime="[(Math.Round(in_swProcessingTimer.Elapsed.TotalSeconds, 2)).ToString]" IN_strTransactionID="[String.Join(&quot;, &quot;, in_arrCaseID.Where(Function(s) not String.IsNullOrEmpty(s)))]" IN_strUser="[Environment.UserName]" IN_strVersion="[io_Config(&quot;WorkPackageVersion&quot;).ToString]" IN_strWorkPackage="[io_Config(&quot;WorkPackageID&quot;).ToString]" sap2010:WorkflowViewState.IdRef="LogTransaction_2">
                           <l:LogTransaction.IN_strMiscNotes>
                             <InArgument x:TypeArguments="x:String">
                               <Literal x:TypeArguments="x:String" DisplayName="Literal&lt;String&gt;" Value="" />
@@ -550,10 +550,10 @@
                         </l:LogTransaction>
                       </TryCatch.Try>
                       <TryCatch.Catches>
-                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,164" sap2010:WorkflowViewState.IdRef="Catch`1_10">
+                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_10">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
@@ -583,7 +583,7 @@
                   <av:Size x:Key="ShapeSize">200,175</av:Size>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence sap2010:Annotation.AnnotationText="If a system exception occurs during the process, the transaction item's status is updated as Failed (Exception Type: Application)." DisplayName="System Exception" sap:VirtualizedContainerService.HintSize="656,3886" sap2010:WorkflowViewState.IdRef="Sequence_13">
+              <Sequence sap2010:Annotation.AnnotationText="If a system exception occurs during the process, the transaction item's status is updated as Failed (Exception Type: Application)." DisplayName="System Exception" sap:VirtualizedContainerService.HintSize="656,3810" sap2010:WorkflowViewState.IdRef="Sequence_13">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:Boolean" Name="QueueRetry" />
                   <Variable x:TypeArguments="x:String" Name="strLogNote" />
@@ -778,26 +778,26 @@
                     </Catch>
                   </TryCatch.Catches>
                 </TryCatch>
-                <Sequence DisplayName="Populate Work Log" sap:VirtualizedContainerService.HintSize="594,990" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                <Sequence DisplayName="Populate Work Log" sap:VirtualizedContainerService.HintSize="594,914" sap2010:WorkflowViewState.IdRef="Sequence_11">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <InvokeMethod DisplayName="Stop Stopwatch" sap:VirtualizedContainerService.HintSize="434,137" sap2010:WorkflowViewState.IdRef="InvokeMethod_3" MethodName="Stop">
+                  <InvokeMethod DisplayName="Stop Stopwatch" sap:VirtualizedContainerService.HintSize="438,137" sap2010:WorkflowViewState.IdRef="InvokeMethod_3" MethodName="Stop">
                     <InvokeMethod.TargetObject>
                       <InArgument x:TypeArguments="sd:Stopwatch">[in_swProcessingTimer]</InArgument>
                     </InvokeMethod.TargetObject>
                   </InvokeMethod>
-                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,331" sap2010:WorkflowViewState.IdRef="TryCatch_11">
+                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,293" sap2010:WorkflowViewState.IdRef="TryCatch_11">
                     <TryCatch.Try>
-                      <l:Log_Case DisplayName="Log Case" sap:VirtualizedContainerService.HintSize="200,25" IN_dateCaseEndTime="[Now]" IN_dateCaseStartTime="[in_dateCaseStartTime]" IN_dateCaseTotalTime="[(Now - in_dateCaseStartTime).ToString]" IN_strCaseID="[String.Join(&quot;, &quot;, in_arrCaseID.Where(Function(s) not String.IsNullOrEmpty(s)))]" IN_strFilePath="[in_strWorkLogFilepath]" IN_strNotes="[strLogNote]" IN_strOutcome="System Exception" IN_strOutcomeMessage="[in_SystemException.Message]" IN_strUser="[io_Config(&quot;Username&quot;).ToString]" IN_strWorkpackageName="[io_Config(&quot;logF_BusinessProcessName&quot;).ToString]" sap2010:WorkflowViewState.IdRef="Log_Case_3" in_dblCaseProcessingTime="[Math.Round(in_swProcessingTimer.Elapsed.TotalSeconds, 2)]" />
+                      <l:Log_Case DisplayName="Log Case" sap:VirtualizedContainerService.HintSize="200,25" IN_dateCaseEndTime="[Now]" IN_dateCaseStartTime="[in_dateCaseStartTime]" IN_dateCaseTotalTime="[(Now - in_dateCaseStartTime).ToString]" IN_strCaseID="[String.Join(&quot;, &quot;, in_arrCaseID.Where(Function(s) not String.IsNullOrEmpty(s)))]" IN_strFilePath="[in_strWorkLogFilepath]" IN_strNotes="[strLogNote]" IN_strOutcome="System Exception" IN_strOutcomeMessage="[in_SystemException.Message]" IN_strUser="[Environment.UserName]" IN_strWorkpackageName="[io_Config(&quot;logF_BusinessProcessName&quot;).ToString]" sap2010:WorkflowViewState.IdRef="Log_Case_3" in_dblCaseProcessingTime="[Math.Round(in_swProcessingTimer.Elapsed.TotalSeconds, 2)]" />
                     </TryCatch.Try>
                     <TryCatch.Catches>
-                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,164" sap2010:WorkflowViewState.IdRef="Catch`1_11">
+                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_11">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
@@ -810,15 +810,15 @@
                       </Catch>
                     </TryCatch.Catches>
                   </TryCatch>
-                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,331" sap2010:WorkflowViewState.IdRef="TryCatch_12">
+                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,293" sap2010:WorkflowViewState.IdRef="TryCatch_12">
                     <TryCatch.Try>
-                      <l:LogTransaction DisplayName="LogTransaction - SQL" sap:VirtualizedContainerService.HintSize="200,25" IN_dateEndDateTime="[Now]" IN_dateStartDateTime="[in_dateCaseStartTime]" IN_intExitPoint="[in_arrExitPoint(0)]" IN_strFileName="[in_strSQLFilePath]" IN_strMiscNotes="[strLogNote]" IN_strOutcome="System Exception" IN_strOutcomeNotes="[in_SystemException.Message]" IN_strTotalTime="[(Math.Round(in_swProcessingTimer.Elapsed.TotalSeconds, 2)).ToString]" IN_strTransactionID="[String.Join(&quot;, &quot;, in_arrCaseID.Where(Function(s) not String.IsNullOrEmpty(s)))]" IN_strUser="[io_Config(&quot;Username&quot;).ToString]" IN_strVersion="[io_Config(&quot;WorkPackageVersion&quot;).ToString]" IN_strWorkPackage="[io_Config(&quot;WorkPackageID&quot;).ToString]" sap2010:WorkflowViewState.IdRef="LogTransaction_3" />
+                      <l:LogTransaction DisplayName="LogTransaction - SQL" sap:VirtualizedContainerService.HintSize="200,25" IN_dateEndDateTime="[Now]" IN_dateStartDateTime="[in_dateCaseStartTime]" IN_intExitPoint="[in_arrExitPoint(0)]" IN_strFileName="[in_strSQLFilePath]" IN_strMiscNotes="[strLogNote]" IN_strOutcome="System Exception" IN_strOutcomeNotes="[in_SystemException.Message]" IN_strTotalTime="[(Math.Round(in_swProcessingTimer.Elapsed.TotalSeconds, 2)).ToString]" IN_strTransactionID="[String.Join(&quot;, &quot;, in_arrCaseID.Where(Function(s) not String.IsNullOrEmpty(s)))]" IN_strUser="[Environment.UserName]" IN_strVersion="[io_Config(&quot;WorkPackageVersion&quot;).ToString]" IN_strWorkPackage="[io_Config(&quot;WorkPackageID&quot;).ToString]" sap2010:WorkflowViewState.IdRef="LogTransaction_3" />
                     </TryCatch.Try>
                     <TryCatch.Catches>
-                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,164" sap2010:WorkflowViewState.IdRef="Catch`1_12">
+                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_12">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>

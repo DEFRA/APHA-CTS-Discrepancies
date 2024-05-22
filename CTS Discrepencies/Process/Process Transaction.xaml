@@ -124,6 +124,7 @@
       <Variable x:TypeArguments="s:String[]" Name="arrLines" />
       <Variable x:TypeArguments="x:String" Name="strTestResults" />
       <Variable x:TypeArguments="s:DateTime" Name="DateTestedSPOL" />
+      <Variable x:TypeArguments="x:String" Name="strOffHoldingDate" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -362,14 +363,14 @@
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="s:Exception" Name="Nothing" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Manual Login" sap:VirtualizedContainerService.HintSize="496,299" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <Sequence DisplayName="Manual Login" sap:VirtualizedContainerService.HintSize="496,339" sap2010:WorkflowViewState.IdRef="Sequence_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <p:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="User Assistance Form" sap:VirtualizedContainerService.HintSize="434,25" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\InitialisationException.css&quot;]" IN_ErrorMessage="The stop button was pressed" IN_PopupMessage="&lt;h1&gt;User assistance required&lt;/h1&gt;&lt;P&gt; I've encountered a problem initialising SAM.&lt;/P&gt;&lt;P&gt; Please ensure the website is open and on the home page then click Continue.&lt;/P&gt;&lt;BR&gt;" IN_PopupTitle="Department for Environment, Food and Rural Affairs" IN_WidthHeight="[{500,300}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_1" />
-                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="Edge" DisplayName="Attach SAM Browser - Open SAM" sap:VirtualizedContainerService.HintSize="434,163" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="ed04d996ed625de878f2ee8dbddeac17" Selector="&lt;html app='msedge.exe' htmlwindowname='Composite_*' title='Animal Health Portal' /&gt;" UiBrowser="[io_UiBrowser]">
+                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="Edge" DisplayName="Attach SAM Browser - Open SAM" sap:VirtualizedContainerService.HintSize="434,203" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="ed04d996ed625de878f2ee8dbddeac17" Selector="&lt;html app='msedge.exe' htmlwindowname='Composite_*' title='Animal Health Portal' /&gt;" UiBrowser="[io_UiBrowser]">
                     <ui:BrowserScope.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
@@ -383,7 +384,7 @@
             </Catch>
           </TryCatch.Catches>
         </TryCatch>
-        <Assign DisplayName="Assign strWSID" sap:VirtualizedContainerService.HintSize="522,83" sap2010:WorkflowViewState.IdRef="Assign_1">
+        <Assign DisplayName="Assign strWSID" sap:VirtualizedContainerService.HintSize="522,82" sap2010:WorkflowViewState.IdRef="Assign_1">
           <Assign.To>
             <OutArgument x:TypeArguments="x:String">[strWorkID]</OutArgument>
           </Assign.To>
@@ -1360,7 +1361,7 @@
                                       <av:PointCollection x:Key="ConnectorLocation">290.25,891.5 290.25,940.5</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtEarTagsSplit]" DisplayName="Action Each Eartag" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtEarTagsSplit]" DisplayName="Action Each Eartag" sap:VirtualizedContainerService.HintSize="1631,1137" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                                     <ui:ForEachRow.Body>
                                       <ActivityAction x:TypeArguments="sd:DataRow">
                                         <ActivityAction.Argument>
@@ -1515,13 +1516,13 @@
                                                             <ActivityAction.Argument>
                                                               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                                                             </ActivityAction.Argument>
-                                                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1099,1373" sap2010:WorkflowViewState.IdRef="Sequence_122">
+                                                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1099,1496" sap2010:WorkflowViewState.IdRef="Sequence_122">
                                                               <sap:WorkflowViewStateService.ViewState>
                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                 </scg:Dictionary>
                                                               </sap:WorkflowViewStateService.ViewState>
-                                                              <Sequence DisplayName="Get Holding Number" sap:VirtualizedContainerService.HintSize="1037,1115" sap2010:WorkflowViewState.IdRef="Sequence_120">
+                                                              <Sequence DisplayName="Get Holding Number" sap:VirtualizedContainerService.HintSize="1037,1238" sap2010:WorkflowViewState.IdRef="Sequence_120">
                                                                 <Sequence.Variables>
                                                                   <Variable x:TypeArguments="sd:DataTable" Name="dtCTSHoldingData" />
                                                                 </Sequence.Variables>
@@ -1554,6 +1555,14 @@
                                                                   </Assign.To>
                                                                   <Assign.Value>
                                                                     <InArgument x:TypeArguments="x:String">[dtCTSHoldingData.Rows(0)("Movement1").ToString()]</InArgument>
+                                                                  </Assign.Value>
+                                                                </Assign>
+                                                                <Assign DisplayName="Get Column Off Holding Date" sap:VirtualizedContainerService.HintSize="975,83" sap2010:WorkflowViewState.IdRef="Assign_77">
+                                                                  <Assign.To>
+                                                                    <OutArgument x:TypeArguments="x:String">[strOffHoldingDate]</OutArgument>
+                                                                  </Assign.To>
+                                                                  <Assign.Value>
+                                                                    <InArgument x:TypeArguments="x:String">[dtCTSHoldingData.Rows(0)("OFF").ToString()]</InArgument>
                                                                   </Assign.Value>
                                                                 </Assign>
                                                                 <If Condition="[strHoldingStatus.Contains(&quot;Off Holding&quot;) or strHoldingStatus.Contains(&quot;Death&quot;)]" sap:VirtualizedContainerService.HintSize="975,477" sap2010:WorkflowViewState.IdRef="If_20">
@@ -1980,7 +1989,7 @@
                                                                           <av:Size x:Key="ShapeSize">200,83</av:Size>
                                                                         </scg:Dictionary>
                                                                       </sap:WorkflowViewStateService.ViewState>
-                                                                      <Sequence DisplayName="Animal off Holding/Dead" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_126">
+                                                                      <Sequence DisplayName="Leave in Outstanding" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_126">
                                                                         <Sequence.Variables>
                                                                           <Variable x:TypeArguments="x:String" Name="strResolvedInfo" />
                                                                         </Sequence.Variables>
@@ -1989,15 +1998,8 @@
                                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                           </scg:Dictionary>
                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                        <Sequence DisplayName="Leave Eartag in Outstanding" sap:VirtualizedContainerService.HintSize="450,434" sap2010:WorkflowViewState.IdRef="Sequence_139">
-                                                                          <sap:WorkflowViewStateService.ViewState>
-                                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                            </scg:Dictionary>
-                                                                          </sap:WorkflowViewStateService.ViewState>
-                                                                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{CurrentRow(&quot;field_13&quot;).ToString.trim}]" DataTable="[dtEartagsOutstanding]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="AddDataRow_17" />
-                                                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,94" sap2010:WorkflowViewState.IdRef="LogMessage_30" Level="Info" Message="[CurrentRow(&quot;field_13&quot;).ToString.trim + &quot; has been added to Outstanding&quot;]" />
-                                                                        </Sequence>
+                                                                        <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{CurrentRow(&quot;field_13&quot;).ToString.trim}]" DataTable="[dtEartagsOutstanding]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="AddDataRow_17" />
+                                                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,94" sap2010:WorkflowViewState.IdRef="LogMessage_30" Level="Info" Message="[CurrentRow(&quot;field_13&quot;).ToString.trim + &quot; has been added to Outstanding&quot;]" />
                                                                       </Sequence>
                                                                     </FlowStep>
                                                                   </FlowDecision.False>
@@ -2027,7 +2029,7 @@
                                                                     <OutArgument x:TypeArguments="x:String">[strResolvedInfo]</OutArgument>
                                                                   </Assign.To>
                                                                   <Assign.Value>
-                                                                    <InArgument x:TypeArguments="x:String">[CurrentRow("field_13").ToString.trim + " - " + strHoldingStatus + " - " + DateTime.Today.ToString("dd/MM/yyyy")]</InArgument>
+                                                                    <InArgument x:TypeArguments="x:String">[CurrentRow("field_13").ToString.trim + " - " + strHoldingStatus + " - " + strOffHoldingDate]</InArgument>
                                                                   </Assign.Value>
                                                                 </Assign>
                                                                 <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{strResolvedInfo}]" DataTable="[dtEartagResolved]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
@@ -2089,7 +2091,7 @@
                                           <av:PointCollection x:Key="ConnectorLocation">290.25,1023.5 290.25,1058.5</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <Sequence DisplayName="Update SPOL" sap:VirtualizedContainerService.HintSize="596,4263" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                                      <Sequence DisplayName="Update SPOL" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_58">
                                         <Sequence.Variables>
                                           <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="newDictionary" />
                                           <Variable x:TypeArguments="s:DateTime" Name="currentDate" />
