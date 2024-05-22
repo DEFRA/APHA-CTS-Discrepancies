@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "a/XmvvpJGZ4wUmowAw1o1gXwisD+dXnDE9NyDtd+jh94+bGrxh9C+IZ/fzXlFI6lJRfDzAUaVTbAfkCPAUMPPw==",
+  "dgSpecHash": "GDX/0k7o98lLFzgK586fMrmRhyLuiWtatvIcLWDoXjns8tH2POz6ugnHqiljVZ42SQyqZ++K1/YNuvrGrEANrA==",
   "success": true,
   "projectFilePath": "C:\\Users\\m1011226\\Documents\\GitHub\\APHA-CTS-Discrepancies\\CTS Discrepencies\\.local\\",
   "expectedPackageFiles": [
@@ -22,7 +22,7 @@
     "C:\\Users\\m1011226\\.nuget\\packages\\h.formatters.binaryformatter\\2.0.35\\h.formatters.binaryformatter.2.0.35.nupkg.sha512",
     "C:\\Users\\m1011226\\.nuget\\packages\\h.pipes\\2.0.35\\h.pipes.2.0.35.nupkg.sha512",
     "C:\\Users\\m1011226\\.nuget\\packages\\htmlagilitypack\\1.11.38\\htmlagilitypack.1.11.38.nupkg.sha512",
-    "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.13\\logging.1.0.13.nupkg.sha512",
+    "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.16\\logging.1.0.16.nupkg.sha512",
     "C:\\Users\\m1011226\\.nuget\\packages\\mailkit\\3.1.1\\mailkit.3.1.1.nupkg.sha512",
     "C:\\Users\\m1011226\\.nuget\\packages\\microsoft.activities\\1.0.1\\microsoft.activities.1.0.1.nupkg.sha512",
     "C:\\Users\\m1011226\\.nuget\\packages\\microsoft.activities.extensions\\2.0.6.9\\microsoft.activities.extensions.2.0.6.9.nupkg.sha512",

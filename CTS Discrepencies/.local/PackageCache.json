@@ -665,7 +665,7 @@
     {
       "Package": {
         "Id": "Logging",
-        "Version": "1.0.13"
+        "Version": "1.0.16"
       },
       "Assemblies": [
         "C:\\Users\\m1011226\\.nuget\\packages\\avalonedit\\6.0.1\\lib/net45/ICSharpCode.AvalonEdit.dll",
@@ -678,15 +678,15 @@
         "C:\\Users\\m1011226\\.nuget\\packages\\h.formatters\\2.0.35\\lib/net451/H.Formatters.dll",
         "C:\\Users\\m1011226\\.nuget\\packages\\h.formatters.binaryformatter\\2.0.35\\lib/net451/H.Formatters.BinaryFormatter.dll",
         "C:\\Users\\m1011226\\.nuget\\packages\\h.pipes\\2.0.35\\lib/net461/H.Pipes.dll",
-        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.13\\lib/net45/Logging.dll",
-        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.13\\lib/net45/Logging_Expressions_10326036.dll",
-        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.13\\lib/net45/Logging_Expressions_16973140.dll",
-        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.13\\lib/net45/Logging_Expressions_32010697.dll",
-        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.13\\lib/net45/Logging_Expressions_34921712.dll",
-        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.13\\lib/net45/Logging_Expressions_38637442.dll",
-        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.13\\lib/net45/Logging_Expressions_38865907.dll",
-        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.13\\lib/net45/Logging_Expressions_48339547.dll",
-        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.13\\lib/net45/Logging_Expressions_55625881.dll",
+        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.16\\lib/net45/Logging.dll",
+        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.16\\lib/net45/Logging_Expressions_16991442.dll",
+        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.16\\lib/net45/Logging_Expressions_21170186.dll",
+        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.16\\lib/net45/Logging_Expressions_27149741.dll",
+        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.16\\lib/net45/Logging_Expressions_5380904.dll",
+        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.16\\lib/net45/Logging_Expressions_56944618.dll",
+        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.16\\lib/net45/Logging_Expressions_60657449.dll",
+        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.16\\lib/net45/Logging_Expressions_66217953.dll",
+        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.16\\lib/net45/Logging_Expressions_9435733.dll",
         "C:\\Users\\m1011226\\.nuget\\packages\\microsoft.aspnet.signalr.client\\2.4.0\\lib/net45/Microsoft.AspNet.SignalR.Client.dll",
         "C:\\Users\\m1011226\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\3.1.6\\lib/netstandard2.0/Microsoft.AspNetCore.Connections.Abstractions.dll",
         "C:\\Users\\m1011226\\.nuget\\packages\\microsoft.aspnetcore.http.connections.client\\3.1.6\\lib/netstandard2.0/Microsoft.AspNetCore.Http.Connections.Client.dll",
@@ -811,7 +811,7 @@
         "C:\\Users\\m1011226\\.nuget\\packages\\uipath.webapi.activities\\1.9.2\\lib/net461/UiPath.Web.Activities.dll",
         "C:\\Users\\m1011226\\.nuget\\packages\\uipath.webapi.activities\\1.9.2\\lib/net461/UiPath.Web.dll"
       ],
-      "Path": "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.13"
+      "Path": "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.16"
     }
   ],
   "Conflicts": [],
@@ -1028,7 +1028,7 @@
     },
     "Logging": {
       "Id": "Logging",
-      "Version": "1.0.13",
+      "Version": "1.0.16",
       "Dependencies": [
         {
           "Item1": "Credentials",
@@ -2992,20 +2992,20 @@
     {
       "Package": {
         "Id": "Logging",
-        "Version": "1.0.13"
+        "Version": "1.0.16"
       },
       "Assemblies": [
-        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.13\\lib\\net45\\Logging.dll",
-        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.13\\lib\\net45\\Logging_Expressions_10326036.dll",
-        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.13\\lib\\net45\\Logging_Expressions_16973140.dll",
-        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.13\\lib\\net45\\Logging_Expressions_32010697.dll",
-        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.13\\lib\\net45\\Logging_Expressions_34921712.dll",
-        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.13\\lib\\net45\\Logging_Expressions_38637442.dll",
-        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.13\\lib\\net45\\Logging_Expressions_38865907.dll",
-        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.13\\lib\\net45\\Logging_Expressions_48339547.dll",
-        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.13\\lib\\net45\\Logging_Expressions_55625881.dll"
+        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.16\\lib\\net45\\Logging.dll",
+        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.16\\lib\\net45\\Logging_Expressions_16991442.dll",
+        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.16\\lib\\net45\\Logging_Expressions_21170186.dll",
+        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.16\\lib\\net45\\Logging_Expressions_27149741.dll",
+        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.16\\lib\\net45\\Logging_Expressions_5380904.dll",
+        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.16\\lib\\net45\\Logging_Expressions_56944618.dll",
+        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.16\\lib\\net45\\Logging_Expressions_60657449.dll",
+        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.16\\lib\\net45\\Logging_Expressions_66217953.dll",
+        "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.16\\lib\\net45\\Logging_Expressions_9435733.dll"
       ],
-      "Path": "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.13"
+      "Path": "C:\\Users\\m1011226\\.nuget\\packages\\logging\\1.0.16"
     },
     {
       "Package": {

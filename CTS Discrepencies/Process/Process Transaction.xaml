@@ -10,7 +10,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1184,1551.5</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1056,1551.5</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Process_Transaction_2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="80">
@@ -102,7 +102,6 @@
       <AssemblyReference>Credentials</AssemblyReference>
       <AssemblyReference>System.Data.Entity</AssemblyReference>
       <AssemblyReference>Microsoft.Activities</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " sap:VirtualizedContainerService.HintSize="820.5,1486.5" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -1361,7 +1360,7 @@
                                       <av:PointCollection x:Key="ConnectorLocation">290.25,891.5 290.25,940.5</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtEarTagsSplit]" DisplayName="Action Each Eartag" sap:VirtualizedContainerService.HintSize="1631,1137" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtEarTagsSplit]" DisplayName="Action Each Eartag" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                                     <ui:ForEachRow.Body>
                                       <ActivityAction x:TypeArguments="sd:DataRow">
                                         <ActivityAction.Argument>
@@ -2508,7 +2507,7 @@
                           <av:Size x:Key="ShapeSize">200,83</av:Size>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="Update SAM Status Closed/Cancelled" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                      <Sequence DisplayName="Update SAM Status Closed/Cancelled" sap:VirtualizedContainerService.HintSize="548,1845" sap2010:WorkflowViewState.IdRef="Sequence_11">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="newDictionary" />
                           <Variable x:TypeArguments="s:DateTime" Name="currentDate" />
@@ -2519,7 +2518,7 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Assign DisplayName="Create new Dictionary of String, Object" sap:VirtualizedContainerService.HintSize="486,83" sap2010:WorkflowViewState.IdRef="Assign_38">
+                        <Assign DisplayName="Create new Dictionary of String, Object" sap:VirtualizedContainerService.HintSize="486,83" sap2010:WorkflowViewState.IdRef="Assign_78">
                           <Assign.To>
                             <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[newDictionary]</OutArgument>
                           </Assign.To>
@@ -2527,7 +2526,7 @@
                             <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[new Dictionary(Of String, object)]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <Assign DisplayName="Get todays date" sap:VirtualizedContainerService.HintSize="486,83" sap2010:WorkflowViewState.IdRef="Assign_39">
+                        <Assign DisplayName="Get todays date" sap:VirtualizedContainerService.HintSize="486,83" sap2010:WorkflowViewState.IdRef="Assign_79">
                           <Assign.To>
                             <OutArgument x:TypeArguments="s:DateTime">[currentDate]</OutArgument>
                           </Assign.To>
@@ -2535,7 +2534,7 @@
                             <InArgument x:TypeArguments="s:DateTime">[datetime.now]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <Assign DisplayName="Format todays date" sap:VirtualizedContainerService.HintSize="486,83" sap2010:WorkflowViewState.IdRef="Assign_40">
+                        <Assign DisplayName="Format todays date" sap:VirtualizedContainerService.HintSize="486,83" sap2010:WorkflowViewState.IdRef="Assign_80">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:String">[formattedDate]</OutArgument>
                           </Assign.To>
@@ -2544,19 +2543,19 @@
                           </Assign.Value>
                         </Assign>
                         <maes:AddToDictionary x:TypeArguments="x:String, x:Object" Dictionary="[newDictionary]" DisplayName="Add item closed date" sap:VirtualizedContainerService.HintSize="486,142" sap2010:WorkflowViewState.IdRef="AddToDictionary`2_7" Key="field_36" Value="[DateTime.ParseExact(formattedDate, &quot;dd/MM/yyyy&quot;, CultureInfo.InvariantCulture)]" />
-                        <usa:SharepointApplicationScope AzureApplicationID="{x:Null}" ClientContext="{x:Null}" ClientId="{x:Null}" ClientSecret="{x:Null}" LoginTimeout="{x:Null}" Password="{x:Null}" SecurePassword="{x:Null}" UserName="{x:Null}" AzureAppPermissions="None" DisplayName="Sharepoint application scope" sap:VirtualizedContainerService.HintSize="486,461" sap2010:WorkflowViewState.IdRef="SharepointApplicationScope_3" PlatformType="Online" QueryGrouping="False" ResetCredentials="False" SharePointInstanceType="WebLogin" URL="https://defra.sharepoint.com/teams/Team1035">
+                        <usa:SharepointApplicationScope AzureApplicationID="{x:Null}" ClientContext="{x:Null}" ClientId="{x:Null}" ClientSecret="{x:Null}" LoginTimeout="{x:Null}" Password="{x:Null}" SecurePassword="{x:Null}" UserName="{x:Null}" AzureAppPermissions="None" DisplayName="Sharepoint application scope" sap:VirtualizedContainerService.HintSize="486,461" sap2010:WorkflowViewState.IdRef="SharepointApplicationScope_7" PlatformType="Online" QueryGrouping="False" ResetCredentials="False" SharePointInstanceType="WebLogin" URL="https://defra.sharepoint.com/teams/Team1035">
                           <usa:SharepointApplicationScope.Body>
                             <ActivityAction x:TypeArguments="us:SharePointContextInfo">
                               <ActivityAction.Argument>
                                 <DelegateInArgument x:TypeArguments="us:SharePointContextInfo" Name="SharePointContextInfoTag" />
                               </ActivityAction.Argument>
-                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,317" sap2010:WorkflowViewState.IdRef="Sequence_69">
+                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,317" sap2010:WorkflowViewState.IdRef="Sequence_139">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <usal:UpdateListItems AttachmentsAction="{x:Null}" LocalPathHintText="{x:Null}" NumberOfItemsProcessedAtOnce="{x:Null}" NumberOfRowsAffected="{x:Null}" RelativeUrlHintText="{x:Null}" AllowOperationOnAllItems="False" CAMLQuery="[&quot;&lt;Query&gt;&lt;Where&gt;&lt;And&gt;&lt;Eq&gt;&lt;FieldRef Name='field_1' /&gt;&lt;Value Type='Text'&gt;&quot; + strWorkId + &quot;&lt;/Value&gt;&lt;/Eq&gt;&lt;IsNotNull&gt;&lt;FieldRef Name='field_13' /&gt;&lt;/IsNotNull&gt;&lt;/And&gt;&lt;/Where&gt;&lt;/Query&gt;&quot;]" ChooseFile="False" DisplayName="Update SPOL" sap:VirtualizedContainerService.HintSize="388,206" sap2010:WorkflowViewState.IdRef="UpdateListItems_2" ListName="Overdue CTS Discrepancies" PropertiesToAdd="[newDictionary]" ShowAttachFiles="False" ShowCAMLQuery="True" ShowCAMLWarning="True" ShowGroupDescription="False" ShowGroupName="False" ShowLibraryName="False" ShowListName="True" ShowLocalPath="False" ShowMove="False" ShowPermissionDropdown="False" ShowPropertiesDictionary="True" ShowRelativeUrl="False" ShowRename="False" ShowUserName="False" />
+                                <usal:UpdateListItems AttachmentsAction="{x:Null}" LocalPathHintText="{x:Null}" NumberOfItemsProcessedAtOnce="{x:Null}" NumberOfRowsAffected="{x:Null}" RelativeUrlHintText="{x:Null}" AllowOperationOnAllItems="False" CAMLQuery="[&quot;&lt;Query&gt;&lt;Where&gt;&lt;And&gt;&lt;Eq&gt;&lt;FieldRef Name='field_1' /&gt;&lt;Value Type='Text'&gt;&quot; + strWorkId + &quot;&lt;/Value&gt;&lt;/Eq&gt;&lt;IsNotNull&gt;&lt;FieldRef Name='field_13' /&gt;&lt;/IsNotNull&gt;&lt;/And&gt;&lt;/Where&gt;&lt;/Query&gt;&quot;]" ChooseFile="False" DisplayName="Update SPOL" sap:VirtualizedContainerService.HintSize="388,206" sap2010:WorkflowViewState.IdRef="UpdateListItems_3" ListName="Overdue CTS Discrepancies" PropertiesToAdd="[newDictionary]" ShowAttachFiles="False" ShowCAMLQuery="True" ShowCAMLWarning="True" ShowGroupDescription="False" ShowGroupName="False" ShowLibraryName="False" ShowListName="True" ShowLocalPath="False" ShowMove="False" ShowPermissionDropdown="False" ShowPropertiesDictionary="True" ShowRelativeUrl="False" ShowRename="False" ShowUserName="False" />
                               </Sequence>
                             </ActivityAction>
                           </usa:SharepointApplicationScope.Body>
